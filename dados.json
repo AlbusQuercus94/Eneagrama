@@ -290,31 +290,31 @@
             },
             {
                 "cartao":3,
-                "afirmacao":""
+                "afirmacao":"Tenho um lado doce, até um pouco sentimental, que demonstro para pouca gente."
             },
             {
                 "cartao":4,
-                "afirmacao":""
+                "afirmacao":"Sou alguém que não passa despercebido, mesmo quando nem penso em fazer isso. Meu tom de voz é naturalmente alto. Muitas vezes, acham que estou gritando ou brigando, mas é meu jeito natural de falar."
             },
             {
                 "cartao":5,
-                "afirmacao":""
+                "afirmacao":"Sou extremamente verdadeiro e franco e falo o que tiver ser falado a quem quer que seja. A vedade deve ser falada a qualquer custo, não importa se as pesoas vão me amar ou me odiar por isso. Isso já me causou problemas no passado."
             },
             {
                 "cartao":6,
-                "afirmacao":""
+                "afirmacao":"Preciso ser forte para ser respeitado."
             },
             {
                 "cartao":7,
-                "afirmacao":""
+                "afirmacao":"Sou uma pessoa muito direta e não gosto que as pessoas fiquem fazendo rodeios antes de falar alguma coisa. Acho importante ir direto ao assunto."
             },
             {
                 "cartao":8,
-                "afirmacao":""
+                "afirmacao":"Busco justiça e sou orientado para a ação, mesmo que, às vezes, por impulso. Não me considero uma pessoa acomodada."
             },
             {
                 "cartao":9,
-                "afirmacao":""
+                "afirmacao":"Meus acessos de raiva são monumentais, mas logo se dissipam. É fácil para mim manifestar a minha insatisfação."
             }
         ]
     },
@@ -330,31 +330,31 @@
             },
             {
                 "cartao":3,
-                "afirmacao":""
+                "afirmacao":"Sou considerado uma pessoa pacífica, que se dá bem com quase todo mundo. É fácil ouvir os outros e ser simpático, mesmo com aqueles que acabei de conhecer. Gosto de bater papo e de ser amigável com todos."
             },
             {
                 "cartao":4,
-                "afirmacao":""
+                "afirmacao":"Prefiro tomar decisões na base do consenso. Coloco-me como mediador, considero importante ouvir a opinião de todos os envolvidos e sou capaz de entender diferentes pontos de vista. Não gosto de decis~eos autoritárias, e esse também não é o meu estilo."
             },
             {
                 "cartao":5,
-                "afirmacao":""
+                "afirmacao":"Percebo-me como uma pessoa indecisa e muitas vezes tenho dificuldade em tomar decisões."
             },
             {
                 "cartao":6,
-                "afirmacao":""
+                "afirmacao":"Acredito que, para ser valorizado e me relacionar bem, preciso concordar com as pessoas. Muitas vezes me esqueço ddas minahs necessidades para atender as pessoas, evitando conflitos e desgaste. Pode ser que alguma vontade minha seja deixada para trás, mas isso não é uma coisa tão importante assim."
             },
             {
                 "cartao":7,
-                "afirmacao":""
+                "afirmacao":"As pessoas tendem a me considerar despreocupado, tranquilo, agradável e paciente. É preciso muita coisa para me levar a demonstrar minha raiva diretamente a alguém. Gosto de uma vida confortável e agradável."
             },
             {
                 "cartao":8,
-                "afirmacao":""
+                "afirmacao":"Eu me distraio facilmente, mesmo que esteja fazendo uma ocisa importante. Às vezes me atrapalho com as prioridades. Quando as pessoas me interropem e pedem alguma coisa, é difícil dizer não a elas e acabo deixando minhas coisas em segundo plano."
             },
             {
                 "cartao":9,
-                "afirmacao":""
+                "afirmacao":"Preciso estar integrado ao todo e me harmonizar com as pessoas."
             }
         ]
     },
@@ -380,6 +380,20 @@
                 "pergunta":"Como você vê o trabalho?",
                 "opcao1":"Eneatipo 1: O Trabalho é visto como dever.",
                 "opcao2":"Eneatipo 7: O trabalho é visto como algo prazeroso; me divirto todos os dias."
+            },
+            {
+                "empate1":2,
+                "empate2":4,
+                "pergunta":"Como você é em suas relações?",
+                "opcao1":"Eneatipo 2: Procuro pelas pessoas. Tenho a tendência a ignorar minhas próprias necessidades.",
+                "opcao2":"Eneatipo 4: Espero que outros me busquem. Conheço minhas próprias emoções e necessidades."
+            },
+            {
+                "empate1":,
+                "empate2":,
+                "pergunta":"",
+                "opcao1":"",
+                "opcao2":""
             }
         ]
     }
