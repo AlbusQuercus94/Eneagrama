@@ -1,6 +1,8 @@
 export const dados = 
 {
-    "perfeicao":[
+    "perfeicao":{
+        "eneatipo":"Perfeição",
+        "cartoes":[
             {
                 "cartao":1,
                 "afirmacao":"Sinto raiva quando alguém não busca fazer as coisas de forma correta, ou quando age de forma irresponsável ou injusta, embora não demonste essa raiva."
@@ -38,7 +40,9 @@ export const dados =
                 "afirmacao":"As coisas dependem tanto de mim para serem feitas que tenho de ser mais organizado e metódico que todo mundo."
             }
         ],
+    },
     "prestatividade":{
+        "eneatipo":"Prestatividade",
         "cartoes":[
             {
                 "cartao":1,
@@ -79,6 +83,7 @@ export const dados =
         ]
     },
     "performance":{
+        "eneatipo":"Performance",
         "cartoes":[
             {
                 "cartao":1,
@@ -119,6 +124,7 @@ export const dados =
         ]
     },
     "profundidade":{
+        "eneatipo":"Profundidade",
         "cartoes":[
             {
                 "cartao":1,
@@ -159,6 +165,7 @@ export const dados =
         ]
     },
     "privacidade":{
+        "eneatipo":"Privacidade",
         "cartoes":[
             {
                 "cartao":1,
@@ -199,6 +206,7 @@ export const dados =
         ]
     },
     "planejamento":{
+        "eneatipo":"Planejamento",
         "cartoes":[
             {
                 "cartao":1,
@@ -239,6 +247,7 @@ export const dados =
         ]
     },
     "prazer":{
+        "eneatipo":"Prazer",
         "cartoes":[
             {
                 "cartao":1,
@@ -279,6 +288,7 @@ export const dados =
         ]
     },
     "poder":{
+        "eneatipo":"Poder",
         "cartoes":[
             {
                 "cartao":1,
@@ -319,6 +329,7 @@ export const dados =
         ]
     },
     "paz":{
+        "eneatipo":"Paz",
         "cartoes":[
             {
                 "cartao":1,
