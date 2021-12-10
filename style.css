@@ -124,3 +124,19 @@ header{
     margin: 20%;
     font-size: 1.5em;
 }
+
+#main .card .wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 2%;
+}
+
+#main .card .wrapper .btn{
+    position: relative;
+    margin-right: 10px;
+}
+
+#main .card .wrapper #agree{
+    margin-right: 0;
+}

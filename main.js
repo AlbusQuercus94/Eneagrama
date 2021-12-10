@@ -31,7 +31,7 @@ function iniciar(){
 
 
 
-btn.addEventListener('click', iniciar)
+// btn.addEventListener('click', iniciar)
 
 // content.innerHTML = `<p>${perfeicao.cartoes[2].afirmacao}</p>`
 // content.style.color = `var(--${eneatipo[8]}-txt-color)`
