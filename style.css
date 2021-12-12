@@ -104,8 +104,9 @@ header{
 .card #content{
     text-align: justify;
     width: 80%;
+    height: 80%;
     /* margin-top: 30%; */
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 #main .card .wrapper{
@@ -118,9 +119,4 @@ header{
 #main .card .wrapper .btn{
     top: 0;
     position: relative;
-    /* margin-right: 10px; */
-}
-
-#main .card .wrapper #agree{
-    margin-right: 0;
 }
