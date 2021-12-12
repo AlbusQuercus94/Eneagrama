@@ -6,6 +6,7 @@ const {perfeicao, prestatividade, performance, profundidade, privacidade, planej
 
 const content = document.querySelector('#content')
 const main = document.querySelector('#main')
+const card = document.querySelector('#card')
 
 for(let x in desempate.cartoes){
     if(desempate.cartoes[x].empate1===3 && desempate.cartoes[x].empate2===6){
@@ -16,23 +17,17 @@ for(let x in desempate.cartoes){
 }
 
 
-var btn = document.querySelector('#iniciar')
+var comecar = document.querySelector('#iniciar')
 
 function iniciar(){
-    const card = document.createElement('div');
-    card.className="card";
-    const cardText = document.createTextNode('Texto')
-    card.appendChild(cardText)
-    console.log(card);
-    main.appendChild(card);
-    main.removeChild(btn)
-
+    comecar.style.visibility = 'hidden'
+    card.style.visibility = 'visible'
 }
 
 
 
-// btn.addEventListener('click', iniciar)
+comecar.addEventListener('click', iniciar)
 
-// content.innerHTML = `<p>${perfeicao.cartoes[2].afirmacao}</p>`
-// content.style.color = `var(--${eneatipo[8]}-txt-color)`
-// document.querySelector('.card').style.backgroundColor = `var(--${eneatipo[8]}-bg-color)`
+content.innerHTML = `<p>${performance.cartoes[3].afirmacao}</p>`
+content.style.color = `var(--${eneatipo[8]}-txt-color)`
+document.querySelector('.card').style.backgroundColor = `var(--${eneatipo[8]}-bg-color)`
