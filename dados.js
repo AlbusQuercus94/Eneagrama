@@ -2,6 +2,7 @@ export const dados =
 {
     "perfeicao":{
         "eneatipo":"Perfeição",
+        "tipo":1,
         "cartoes":[
             {
                 "cartao":1,
@@ -43,6 +44,7 @@ export const dados =
     },
     "prestatividade":{
         "eneatipo":"Prestatividade",
+        "tipo":2,
         "cartoes":[
             {
                 "cartao":1,
@@ -84,6 +86,7 @@ export const dados =
     },
     "performance":{
         "eneatipo":"Performance",
+        "tipo":3,
         "cartoes":[
             {
                 "cartao":1,
@@ -125,6 +128,7 @@ export const dados =
     },
     "profundidade":{
         "eneatipo":"Profundidade",
+        "tipo":4,
         "cartoes":[
             {
                 "cartao":1,
@@ -166,6 +170,7 @@ export const dados =
     },
     "privacidade":{
         "eneatipo":"Privacidade",
+        "tipo":5,
         "cartoes":[
             {
                 "cartao":1,
@@ -207,6 +212,7 @@ export const dados =
     },
     "planejamento":{
         "eneatipo":"Planejamento",
+        "tipo":6,
         "cartoes":[
             {
                 "cartao":1,
@@ -248,6 +254,7 @@ export const dados =
     },
     "prazer":{
         "eneatipo":"Prazer",
+        "tipo":7,
         "cartoes":[
             {
                 "cartao":1,
@@ -289,6 +296,7 @@ export const dados =
     },
     "poder":{
         "eneatipo":"Poder",
+        "tipo":8,
         "cartoes":[
             {
                 "cartao":1,
@@ -330,6 +338,7 @@ export const dados =
     },
     "paz":{
         "eneatipo":"Paz",
+        "tipo":9,
         "cartoes":[
             {
                 "cartao":1,
@@ -370,145 +379,145 @@ export const dados =
         ]
     },
     "desempate":{
-        "cartoes":{
-            "variavel1":{
+        "cartoes":[
+            {
                 "empate1":1,
                 "empate2":4,
                 "pergunta":"Sob estresse, como você se compara com os outros?",
                 "opcao1":"Eneatipo 1: Eu me Comparo com as pessoas no sentido de organização ou ação.",
                 "opcao2":"Eneatipo 4: Eu me comparo com as pessoas no sentido de desvalorização ou competição."
             },
-            "variavel2":{
+            {
                 "empate1":1,
                 "empate2":6,
                 "pergunta":"Como é para você tomar uma decisão entre o que deve ser feito ou não(certo e errado)?",
                 "opcao1":"Eneatipo 1: Eu me Comparo com as pessoas no sentido de organização ou ação.",
                 "opcao2":"Eneatipo 6: Eu me comparo com as pessoas no sentido de desvalorização ou competição."
             },
-            "variavel3":{
+            {
                 "empate1":1,
                 "empate2":7,
                 "pergunta":"Como você vê o trabalho?",
                 "opcao1":"Eneatipo 1: O Trabalho é visto como dever.",
                 "opcao2":"Eneatipo 7: O trabalho é visto como algo prazeroso; me divirto todos os dias."
             },
-            "variavel4":{
+            {
                 "empate1":2,
                 "empate2":4,
                 "pergunta":"Como você é em suas relações?",
                 "opcao1":"Eneatipo 2: Procuro pelas pessoas. Tenho a tendência a ignorar minhas próprias necessidades.",
                 "opcao2":"Eneatipo 4: Espero que outros me busquem. Conheço minhas próprias emoções e necessidades."
             },
-            "variavel5":{
+            {
                 "empate1":2,
                 "empate2":8,
                 "pergunta":"Como você reage ao estresse?",
                 "opcao1":"Eneatipo 2: Minha intensidade é emocional, direcionada a ajudar as pessoas.",
                 "opcao2":"Eneatipo 8: Minha intensidade é visceral, direcionada a ter o controle da situação."
             },
-            "variavel6":{
+            {
                 "empate1":2,
                 "empate2":9,
                 "pergunta":"Como é para você se posicionar em relação ao outro?",
                 "opcao1":"Eneatipo 2: Ajudo a pessoa sem que ela me peça e consigo falar quando estou chateado.",
                 "opcao2":"Eneatipo 9: Esperio a pessoa me pedir ajuda e dificilmente consigo falar não."
             },
-            "variavel7":{
+            {
                 "empate1":3,
                 "empate2":6,
                 "pergunta":"Como você busca seus resultados?",
                 "opcao1":"Eneatipo 3: Busco os resultados pelo sentimento da minha realização: 'Eu fiz!'",
                 "opcao2":"Eneatipo 6: Busco os resuldaos pelo sentimento de grupo: 'Nós fizemos!'"
             },
-            "variavel8":{
+            {
                 "empate1":3,
                 "empate2":7,
                 "pergunta":"Como você se comporta diante de novos projetos?",
                 "opcao1":"Eneatipo 3: Gosto de novidades e geralmente vou até o fim dos meus projetos para realizá-los.",
                 "opcao2":"Eneatipo 7: Eu me empolgo com um novo projeto, mas nem sempre ele se realiza ou chega ao fim."
             },
-            "variavel9":{
+            {
                 "empate1":3,
                 "empate2":8,
                 "pergunta":"Qual é a sua relação com a competição e o fracasso?",
                 "opcao1":"Eneatipo 3: Tenho foco no sucesso. Se entro em uma competição é para ganhar e ser reconhecido.",
                 "opcao2":"Eneatipo 8: Gosto de competir para medir minha força. Vejo o fracasso como uma oportunidade de aprender algo e me tornar mais forte."
             },
-            "variavel10":{
+            {
                 "empate1":3,
                 "empate2":9,
                 "pergunta":"Como você reage ao estresse?",
                 "opcao1":"Eneatipo 3: Minha adaptação às pessoas me proporciona ótimos resultados.",
                 "opcao2":"Eneatipo 9: Minha adaptação às pessoas me proporciona equilíbrio e tranquilidade."
             },
-            "variavel11":{
+            {
                 "empate1":4,
                 "empate2":7,
                 "pergunta":"Como a busca pelo novo faz você mudar o foco?",
                 "opcao1":"Eneatipo 4: Por causa da sensação de falta, busco coisas que fazem sentido para mim.",
                 "opcao2":"Eneatipo 7: Pela sensação de prazer e interesse, busco coisas novas."
             },
-            "variavel12":{
+            {
                 "empate1":4,
                 "empate2":8,
                 "pergunta":"Como a sua impaciência interfere na sua compaixão?",
                 "opcao1":"Eneatipo 4: Eu me emociono e ajudo as pessoas, mas fico impaciente quando algo não faz mais sentido para mim.",
                 "opcao2":"Eneatipo 8: Normalmente protejo as pessoas que considero fracas, mas fico impaciente quando não se posicionam."
             },
-            "variavel13":{
+            {
                 "empate1":4,
                 "empate2":9,
                 "pergunta":"Como sua insegurança interfere no jeito de tomar decisões?",
                 "opcao1":"Eneatipo 4: Falo sobre meus sentimentos para as pessoas e tomo a decisão que faz mais sentido para mim.",
                 "opcao2":"Eneatipo 9: Falo sobre minahs inseguranças para as pessoas e espero que os outros tomem a decisão por mim."
             },
-            "variavel14":{
+            {
                 "empate1":5,
                 "empate2":7,
                 "pergunta":"Como você reage ao estresse?",
                 "opcao1":"Eneatipo 5: Busco mais informações para entender melhor o que está acontecendo.",
                 "opcao2":"Eneatipo 7: Busco novos ares e momentos prazerosos."
             },
-            "variavel15":{
+            {
                 "empate1":5,
                 "empate2":8,
                 "pergunta":"Como você vê o isolamento?",
                 "opcao1":"Eneatipo 5: O isolamento é uma forma de recarregar as energias para eu conseguir interagir com as pessoas.",
                 "opcao2":"Eneatipo 8: O isolamento é uma forma de organizar estratégias para me manter forte."
             },
-            "variavel16":{
+            {
                 "empate1":5,
                 "empate2":9,
                 "pergunta":"Como é a sua toma da de decisões?",
                 "opcao1":"Eneatipo 5: Preciso me assegurar da minha decisão por meio de uma gama de informações.",
                 "opcao2":"Eneatipo 9: Minha tomada de decisão se dá por meio da ação."
             },
-            "variavel17":{
+            {
                 "empate1":6,
                 "empate2":8,
                 "pergunta":"Como é para você se impor?",
                 "opcao1":"Eneatipo 6: Eu me imponho para evitar me sentir ameaçado e inseguro.",
                 "opcao2":"Eneatipo 8: Me impor faz parte do meu eu, mas não gosto de demonstar minha insegurança."
             },
-            "variavel18":{
+            {
                 "empate1":6,
                 "empate2":9,
                 "pergunta":"Como você se comporta diante de um problema?",
                 "opcao1":"Eneatipo 6: Procuro desabafar com alguém meus medos e dúvidas.",
                 "opcao2":"Eneatipo 9: Tenho a tendência a guardar os problemas para mim, para não chatear as pessoas."
             }
-        },
+        ],
         "coringa":{
             "pergunta":"Qual a sua principal motivação?",
-            "opcao1":"Eneatipo 1: Busco a perfeição, mas posso me tornar crítico e exigente demais.",
-            "opcao2":"Eneatipo 2: Busco ser querido pelos outros; sempre sei do que as pessoas precisam.",
-            "opcao3":"Eneatipo 3: Busco resultados; eu me adapto para amplicar eficiência e crio uma imagem de sucesso.",
-            "opcao4":"Eneatipo 4: Busco singularidade; sou autêntico e percebo meu gosto pelo diferente.",
-            "opcao5":"Eneatipo 5: Busco conhecimento e compreender racionalmente minha realidade.",
-            "opcao6":"Eneatipo 6: Busco segurança para me manter confiante diante das incertezas da vida.",
-            "opcao7":"Eneatipo 7: Busco prazer e satisfação; sei que tudo sempre acaba bem.",
-            "opcao8":"Eneatipo 8: Busco respeito e ser uma pessoa forte e independente.",
-            "opcao9":"Eneatipo 9: Busco paz e harmonia em tudo e sempre me adapto diante das pressões."
+            "1":"Eneatipo 1: Busco a perfeição, mas posso me tornar crítico e exigente demais.",
+            "2":"Eneatipo 2: Busco ser querido pelos outros; sempre sei do que as pessoas precisam.",
+            "3":"Eneatipo 3: Busco resultados; eu me adapto para amplicar eficiência e crio uma imagem de sucesso.",
+            "4":"Eneatipo 4: Busco singularidade; sou autêntico e percebo meu gosto pelo diferente.",
+            "5":"Eneatipo 5: Busco conhecimento e compreender racionalmente minha realidade.",
+            "6":"Eneatipo 6: Busco segurança para me manter confiante diante das incertezas da vida.",
+            "7":"Eneatipo 7: Busco prazer e satisfação; sei que tudo sempre acaba bem.",
+            "8":"Eneatipo 8: Busco respeito e ser uma pessoa forte e independente.",
+            "9":"Eneatipo 9: Busco paz e harmonia em tudo e sempre me adapto diante das pressões."
         }
     }
 }
