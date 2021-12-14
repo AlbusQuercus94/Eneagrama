@@ -10,6 +10,7 @@
     --prazer-bg-color: #3916C5;
     --poder-bg-color: #BC0568;
     --paz-bg-color: #B80016;
+    --desempate-bg-color:#000;
 
     --perfeicao-txt-color: #000;
     --prestatividade-txt-color: #000;
@@ -20,6 +21,7 @@
     --prazer-txt-color: #fff;
     --poder-txt-color: #fff;
     --paz-txt-color: #fff;
+    --desempate-txt-color: #fff;
 }
 
 *{
