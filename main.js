@@ -17,16 +17,13 @@ var carta = 0
 var tipo = 0
 
 
+let agreeArray = [];
+let disagreeArray = [];
+let maisEscolhidos = [] //Criar um Array pra receber os maiores grupos
+let segundoMaisEscolhidos = []
+
 //Agilizar o teste de ENDGAME
 tipo=8;
-
-for(let x in desempate.cartoes){
-    if(desempate.cartoes[x].empate1===3 && desempate.cartoes[x].empate2===6){
-        console.log(desempate.cartoes[x].pergunta)
-        console.log(desempate.cartoes[x].opcao1)
-        console.log(desempate.cartoes[x].opcao2)
-    }
-}
 
 for (let x in dados){
     if(x === 'desempate'){
@@ -59,46 +56,88 @@ function proximo(){
 
 
 function endgame(){
-    let agreeArray = [];
-    let disagreeArray = [];
     for (let x in dados){
         if(x !=='desempate'){
-            agreeArray.push({enea:dados[x].eneatipo, confirm:dados[x].agree=Math.floor(Math.random() * 6)});
+            agreeArray.push({enea:dados[x].tipo, confirm:dados[x].agree=Math.floor(Math.random() * 6)});
             disagreeArray.push(dados[x].eneatipo,dados[x].disagree=Math.floor(Math.random() * 5));
         }
     }
 
     agreeArray.sort((a, b) => b.confirm - a.confirm) //Organiza por ordem crescente
-    
-    let group = [] //Criar um Array pra receber os maiores grupos
 
-    group.push(agreeArray[0]) //Adiciona o eneatipo com maior grupo
+    maisEscolhidos.push(agreeArray[0]) //Adiciona o eneatipo com maior grupo
 
     for(let i=1; i<agreeArray.length; i++){ //verifica se há outros eneatipos com a mesma quantidade de confirmações
             if(agreeArray[0].confirm == agreeArray[i].confirm){
-            group.push(agreeArray[i])
+            maisEscolhidos.push(agreeArray[i])
         }
     }
-    // console.log(group) //Teste de desenvolvimento
 
-    if(group.length<2){//Se não tiver apenas um eneatipo de maior quantidade de confirmações
-    group.push(agreeArray[1]) // Adiciona o segundo maior e repete o processo de igualdade
+    if(maisEscolhidos.length<2){//Se não tiver apenas um eneatipo de maior quantidade de confirmações
+        segundoMaisEscolhidos.push(agreeArray[1]) // Adiciona o segundo maior e repete o processo de igualdade
         for(let i=2; i<agreeArray.length; i++){
-            if(agreeArray[1].confirm == agreeArray[i].confirm){
-                group.push(agreeArray[i])
+            if(segundoMaisEscolhidos[0].confirm == agreeArray[i].confirm){
+                segundoMaisEscolhidos.push(agreeArray[i])
             }
         }
-        console.log('Desempate das menores')
-        console.log(group) //Ainda falta um passo
-    }else if(group.length>2){//Se tiver 3 eneatipos com o mesmo maior valor de confirmações, dever-se-á repetir o teste
+
+        if(segundoMaisEscolhidos.length==1){//Finalizado
+            maisEscolhidos.push(...segundoMaisEscolhidos)
+            console.log('Desempate dos Grupos')
+            escolhaFinal()
+        }
+        
+        else{   
+            console.log('Desempate dos menores')
+            console.log(segundoMaisEscolhidos) //Ainda falta um passo
+        }
+    }
+
+    else if(maisEscolhidos.length>2){//Se tiver 3 eneatipos com o mesmo maior valor de confirmações, dever-se-á repetir o teste
+        iniciar()
         console.log('Refazer o teste')
-    }else{
-        console.log(group.length)//Proximo passo de desempate.
+    }
+
+    else{
+        console.log('Apenas dois mais escolhidos')//Proximo passo de desempate.
+        escolhaFinal()
     }
 
     console.log(agreeArray)
 
 }
+
+function coringa(array){
+
+}
+
+function escolha(eneaA, eneaB){//Nome provisório
+    for(let x of desempate.cartoes){
+        if((x.empate1===eneaA) && (x.empate2===eneaB)){
+            return x
+        }else if(((x.empate1===eneaA) && (x.empate2===eneaB))===false){
+            coringa()
+            return console.log(
+                desempate.coringa.pergunta,
+                desempate.coringa[eneaA],
+                desempate.coringa[eneaB]
+                )
+        }
+    }
+}
+
+
+function escolhaFinal(){//Nome provisório
+    console.log(maisEscolhidos)
+    maisEscolhidos.sort((a, b) => a.enea - b.enea)
+    // console.log(dados.desempate.coringa[
+    //     maisEscolhidos[0].enea])
+    // console.log(dados.desempate.coringa[
+    //     maisEscolhidos[1].enea])
+    // console.log(escolha(maisEscolhidos[0].enea,maisEscolhidos[1].enea))
+    
+}
+
 btnAgree.addEventListener('click', () => {
     if(tipo==9){
         console.log('Fim de Jogo')
@@ -130,5 +169,6 @@ btnDisagree.addEventListener('click', () => {
 })
 
 endgame()
-
 comecar.addEventListener('click', iniciar)
+
+escolha(2,7)
