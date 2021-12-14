@@ -68,23 +68,37 @@ function endgame(){
         }
     }
 
-    agreeArray.sort((a, b) => b.confirm - a.confirm)
+    agreeArray.sort((a, b) => b.confirm - a.confirm) //Organiza por ordem crescente
+    
+    let group = [] //Criar um Array pra receber os maiores grupos
 
-    for(let i=0; i<agreeArray.length; i++){
-        let count = 0
-        for(let j=0; j<agreeArray.length; j++){
-            if(i!=j && agreeArray[i].confirm === agreeArray[j].confirm){
-                count++
+    group.push(agreeArray[0]) //Adiciona o eneatipo com maior grupo
+
+    for(let i=1; i<agreeArray.length; i++){ //verifica se há outros eneatipos com a mesma quantidade de confirmações
+            if(agreeArray[0].confirm == agreeArray[i].confirm){
+            group.push(agreeArray[i])
+        }
+    }
+    // console.log(group) //Teste de desenvolvimento
+
+    if(group.length<2){//Se não tiver apenas um eneatipo de maior quantidade de confirmações
+    group.push(agreeArray[1]) // Adiciona o segundo maior e repete o processo de igualdade
+        for(let i=2; i<agreeArray.length; i++){
+            if(agreeArray[1].confirm == agreeArray[i].confirm){
+                group.push(agreeArray[i])
             }
         }
-        console.log(agreeArray[i].enea,count)
+        console.log('Desempate das menores')
+        console.log(group) //Ainda falta um passo
+    }else if(group.length>2){//Se tiver 3 eneatipos com o mesmo maior valor de confirmações, dever-se-á repetir o teste
+        console.log('Refazer o teste')
+    }else{
+        console.log(group.length)//Proximo passo de desempate.
     }
 
     console.log(agreeArray)
 
 }
-
-
 btnAgree.addEventListener('click', () => {
     if(tipo==9){
         console.log('Fim de Jogo')
