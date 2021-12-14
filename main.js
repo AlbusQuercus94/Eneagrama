@@ -12,10 +12,13 @@ const comecar = document.querySelector('#iniciar')
 const btnAgree = document.querySelector('#agree')
 const btnDisagree = document.querySelector('#disagree')
 
-var teste = dados[novetipo[0]]
+var eneatipo = dados[novetipo[0]]
 var carta = 0
 var tipo = 0
 
+
+//Agilizar o teste de ENDGAME
+tipo=8;
 
 for(let x in desempate.cartoes){
     if(desempate.cartoes[x].empate1===3 && desempate.cartoes[x].empate2===6){
@@ -26,7 +29,7 @@ for(let x in desempate.cartoes){
 }
 
 for (let x in dados){
-    if(dados[x] == 'desempate'){
+    if(x === 'desempate'){
         continue
     }else{
         dados[x].agree = 0;
@@ -39,41 +42,79 @@ function iniciar(){
     comecar.style.visibility = 'hidden'
     card.style.visibility = 'visible'
     
-    content.innerHTML = `<p>${teste.cartoes[carta].afirmacao}</p>`
+    content.innerHTML = `<p>${eneatipo.cartoes[carta].afirmacao}</p>`
     content.style.color = `var(--${novetipo[tipo]}-txt-color)`
     document.querySelector('.card').style.backgroundColor = `var(--${novetipo[tipo]}-bg-color)`
 }
 
-
-btnAgree.addEventListener('click', () => {
+function proximo(){
     if(carta>7){
         carta = 0
         tipo++
     }else{
         carta++
     }
-    var teste = dados[novetipo[tipo]]
-    perfeicao.agree+=1;
-    console.log(teste, carta)
-    content.innerHTML = `<p>${teste.cartoes[carta].afirmacao}</p>`
-    content.style.color = `var(--${novetipo[tipo]}-txt-color)`
-    document.querySelector('.card').style.backgroundColor = `var(--${novetipo[tipo]}-bg-color)`
+}
+
+
+
+function endgame(){
+    let agreeArray = [];
+    let disagreeArray = [];
+    for (let x in dados){
+        if(x !=='desempate'){
+            agreeArray.push({enea:dados[x].eneatipo, confirm:dados[x].agree=Math.floor(Math.random() * 6)});
+            disagreeArray.push(dados[x].eneatipo,dados[x].disagree=Math.floor(Math.random() * 5));
+        }
+    }
+
+    agreeArray.sort((a, b) => b.confirm - a.confirm)
+
+    for(let i=0; i<agreeArray.length; i++){
+        let count = 0
+        for(let j=0; j<agreeArray.length; j++){
+            if(i!=j && agreeArray[i].confirm === agreeArray[j].confirm){
+                count++
+            }
+        }
+        console.log(agreeArray[i].enea,count)
+    }
+
+    console.log(agreeArray)
+
+}
+
+
+btnAgree.addEventListener('click', () => {
+    if(tipo==9){
+        console.log('Fim de Jogo')
+        endgame()
+    }
+    else{
+        eneatipo = dados[novetipo[tipo]]
+        eneatipo.agree+=1;
+        content.innerHTML = `<p>${eneatipo.cartoes[carta].afirmacao}</p>`
+        content.style.color = `var(--${novetipo[tipo]}-txt-color)`
+        document.querySelector('.card').style.backgroundColor = `var(--${novetipo[tipo]}-bg-color)`
+    }
+    proximo()
 })
 
 btnDisagree.addEventListener('click', () => {
-    if(carta>7){
-        carta = 0
-        tipo++
-    }else{
-        carta++
+    if(tipo==9){
+        console.log('Fim de Jogo')
+        endgame()
     }
-    var teste = dados[novetipo[tipo]]
-    teste.disagree+=1;
-    console.log(teste, carta)
-    content.innerHTML = `<p>${teste.cartoes[carta].afirmacao}</p>`
-    content.style.color = `var(--${novetipo[tipo]}-txt-color)`
-    document.querySelector('.card').style.backgroundColor = `var(--${novetipo[tipo]}-bg-color)`
+    else{
+        eneatipo = dados[novetipo[tipo]]
+        eneatipo.disagree+=1;
+        content.innerHTML = `<p>${eneatipo.cartoes[carta].afirmacao}</p>`
+        content.style.color = `var(--${novetipo[tipo]}-txt-color)`
+        document.querySelector('.card').style.backgroundColor = `var(--${novetipo[tipo]}-bg-color)`
+    }
+    proximo()
 })
 
+endgame()
 
 comecar.addEventListener('click', iniciar)
