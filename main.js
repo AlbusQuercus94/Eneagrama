@@ -11,6 +11,8 @@ const card = document.querySelector('#card')
 const comecar = document.querySelector('#iniciar')
 const btnAgree = document.querySelector('#agree')
 const btnDisagree = document.querySelector('#disagree')
+const wrapper = document.querySelector('.wrapper')
+
 
 var eneatipo = dados[novetipo[0]]
 var carta = 0
@@ -89,7 +91,7 @@ function endgame(){
         
         else{   
             console.log('Desempate dos menores')
-            console.log(segundoMaisEscolhidos) //Ainda falta um passo
+            desempateDosMenores(segundoMaisEscolhidos)
         }
     }
 
@@ -109,6 +111,21 @@ function endgame(){
 
 function coringa(array){
 
+}
+
+function desempateDosMenores(arr){
+    iniciar()
+    console.log(arr)
+    content.innerHTML = `<p>${desempate.coringa.pergunta}</p>`
+    content.innerHTML += `<ul></ul>`
+    const ul = document.querySelector('ul')
+    for(let i=0; i<arr.length; i++) {
+        ul.innerHTML += `<li class='bn'>${desempate.coringa[arr[i].enea]}</li>`
+    }
+    wrapper.style.visibility='hidden'
+    
+    content.style.color = `var(--desempate-txt-color)`
+    document.querySelector('.card').style.backgroundColor = `var(--desempate-bg-color)`
 }
 
 function escolha(eneaA, eneaB){//Nome provisório
@@ -167,8 +184,6 @@ btnDisagree.addEventListener('click', () => {
     }
     proximo()
 })
-
 endgame()
 comecar.addEventListener('click', iniciar)
 
-escolha(2,7)
