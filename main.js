@@ -13,19 +13,23 @@ const btnAgree = document.querySelector('#agree')
 const btnDisagree = document.querySelector('#disagree')
 const wrapper = document.querySelector('.wrapper')
 
+let liBTN = document.querySelector('.liBTN')
 
 var eneatipo = dados[novetipo[0]]
 var carta = 0
 var tipo = 0
-
 
 let agreeArray = [];
 let disagreeArray = [];
 let maisEscolhidos = [] //Criar um Array pra receber os maiores grupos
 let segundoMaisEscolhidos = []
 
-//Agilizar o teste de ENDGAME
-tipo=8;
+//Globalizando a função
+window.coringa = coringa
+window.fimDeJogo = fimDeJogo
+
+//Agilizar o teste de eneatipoMaisEscolhido
+// tipo=8;
 
 for (let x in dados){
     if(x === 'desempate'){
@@ -44,6 +48,8 @@ function iniciar(){
     content.innerHTML = `<p>${eneatipo.cartoes[carta].afirmacao}</p>`
     content.style.color = `var(--${novetipo[tipo]}-txt-color)`
     document.querySelector('.card').style.backgroundColor = `var(--${novetipo[tipo]}-bg-color)`
+
+    
 }
 
 function proximo(){
@@ -55,13 +61,11 @@ function proximo(){
     }
 }
 
-
-
-function endgame(){
+function eneatipoMaisEscolhido(){
     for (let x in dados){
         if(x !=='desempate'){
-            agreeArray.push({enea:dados[x].tipo, confirm:dados[x].agree=Math.floor(Math.random() * 6)});
-            disagreeArray.push(dados[x].eneatipo,dados[x].disagree=Math.floor(Math.random() * 5));
+            agreeArray.push({enea:dados[x].tipo, confirm:dados[x].agree});
+            disagreeArray.push(dados[x].eneatipo,dados[x].disagree);
         }
     }
 
@@ -86,12 +90,14 @@ function endgame(){
         if(segundoMaisEscolhidos.length==1){//Finalizado
             maisEscolhidos.push(...segundoMaisEscolhidos)
             console.log('Desempate dos Grupos')
+            // iniciar() //para o teste
             escolhaFinal()
         }
         
         else{   
             console.log('Desempate dos menores')
-            desempateDosMenores(segundoMaisEscolhidos)
+            // iniciar() //para o teste
+            desempateDosGrupos(segundoMaisEscolhidos)
         }
     }
 
@@ -102,6 +108,8 @@ function endgame(){
 
     else{
         console.log('Apenas dois mais escolhidos')//Proximo passo de desempate.
+        
+        // iniciar() //para o teste
         escolhaFinal()
     }
 
@@ -109,56 +117,100 @@ function endgame(){
 
 }
 
-function coringa(array){
-
+function coringa(id){
+    maisEscolhidos.push(segundoMaisEscolhidos[id])
+    escolhaFinal()
 }
 
-function desempateDosMenores(arr){
-    iniciar()
-    console.log(arr)
+function desempateDosGrupos(arr){
     content.innerHTML = `<p>${desempate.coringa.pergunta}</p>`
     content.innerHTML += `<ul></ul>`
     const ul = document.querySelector('ul')
-    for(let i=0; i<arr.length; i++) {
-        ul.innerHTML += `<li class='bn'>${desempate.coringa[arr[i].enea]}</li>`
-    }
     wrapper.style.visibility='hidden'
+
+    for(let i=0; i<arr.length; i++) {
+        ul.innerHTML += `<li>
+                <button id = "${i}"class='liBTN' onclick='coringa(this.id)'>
+                    ${desempate.coringa[arr[i].enea]}
+                </button>
+            </li>`
+    }
     
+    let liOption = document.querySelectorAll('LI')
+
     content.style.color = `var(--desempate-txt-color)`
     document.querySelector('.card').style.backgroundColor = `var(--desempate-bg-color)`
 }
 
 function escolha(eneaA, eneaB){//Nome provisório
+    let count = 0;
     for(let x of desempate.cartoes){
-        if((x.empate1===eneaA) && (x.empate2===eneaB)){
-            return x
-        }else if(((x.empate1===eneaA) && (x.empate2===eneaB))===false){
-            coringa()
-            return console.log(
-                desempate.coringa.pergunta,
-                desempate.coringa[eneaA],
-                desempate.coringa[eneaB]
-                )
-        }
+        if(x.empate1===eneaA && x.empate2===eneaB){
+
+            console.log('Entrou aqui')
+
+            content.innerHTML = `<p>${x.pergunta}</p>`
+            content.innerHTML += `<ul></ul>`
+            const ul = document.querySelector('ul')
+            ul.innerHTML += 
+                `<li>
+                    <button id="${eneaA}" class='liBTN' onclick='fimDeJogo(this.id)'>
+                        ${x.opcao1}
+                    </button>
+                </li>`
+            ul.innerHTML += 
+                `<li>
+                    <button id="${eneaB}" class='liBTN' onclick='fimDeJogo(this.id)'>
+                        ${x.opcao2}
+                    </button>
+                </li>`
+            content.style.color = `var(--desempate-txt-color)`
+            document.querySelector('.card').style.backgroundColor = `var(--desempate-bg-color)`
+        }else{
+            count++
+            if(count==18){
+                console.log('só tem falso aqui')
+                
+                content.innerHTML = `<p>${desempate.coringa.pergunta}</p>`
+                content.innerHTML += `<ul></ul>`
+                const ul = document.querySelector('ul')
+                for(let i=0; i<2; i++) {
+                    ul.innerHTML += 
+                    `<li>
+                    <button id = "${maisEscolhidos[i].enea}" class='liBTN' onclick='fimDeJogo(this.id)'>
+                        ${desempate.coringa[maisEscolhidos[i].enea]}
+                        </button>
+                    </li>`
+                }
+                content.style.color = `var(--desempate-txt-color)`
+                document.querySelector('.card').style.backgroundColor = `var(--desempate-bg-color)`
+            }
+        } 
     }
 }
 
 
 function escolhaFinal(){//Nome provisório
-    console.log(maisEscolhidos)
+    wrapper.style.visibility='hidden'
+    
     maisEscolhidos.sort((a, b) => a.enea - b.enea)
-    // console.log(dados.desempate.coringa[
-    //     maisEscolhidos[0].enea])
-    // console.log(dados.desempate.coringa[
-    //     maisEscolhidos[1].enea])
-    // console.log(escolha(maisEscolhidos[0].enea,maisEscolhidos[1].enea))
+    console.log(maisEscolhidos[0].enea)
+    escolha(maisEscolhidos[0].enea,maisEscolhidos[1].enea)
     
 }
 
+function fimDeJogo(id){
+    eneatipo = dados[novetipo[id-1]]
+    content.innerHTML = `<h1>${eneatipo.eneatipo}</h1>`
+    
+}
+
+
 btnAgree.addEventListener('click', () => {
+    
     if(tipo==9){
         console.log('Fim de Jogo')
-        endgame()
+        eneatipoMaisEscolhido()
     }
     else{
         eneatipo = dados[novetipo[tipo]]
@@ -167,13 +219,16 @@ btnAgree.addEventListener('click', () => {
         content.style.color = `var(--${novetipo[tipo]}-txt-color)`
         document.querySelector('.card').style.backgroundColor = `var(--${novetipo[tipo]}-bg-color)`
     }
+    console.log('FOI',eneatipo.agree)
+    console.log('carta', carta)
     proximo()
 })
 
 btnDisagree.addEventListener('click', () => {
+    
     if(tipo==9){
         console.log('Fim de Jogo')
-        endgame()
+        eneatipoMaisEscolhido()
     }
     else{
         eneatipo = dados[novetipo[tipo]]
@@ -182,8 +237,13 @@ btnDisagree.addEventListener('click', () => {
         content.style.color = `var(--${novetipo[tipo]}-txt-color)`
         document.querySelector('.card').style.backgroundColor = `var(--${novetipo[tipo]}-bg-color)`
     }
+    
+    console.log('FOI 22', eneatipo.disagree)
     proximo()
 })
-endgame()
+
+
+// eneatipoMaisEscolhido()
+
 comecar.addEventListener('click', iniciar)
 

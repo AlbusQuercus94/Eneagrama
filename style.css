@@ -128,3 +128,18 @@ header{
     left: 0;
     position: relative;
 }
+
+#main #content ul{
+    margin-top: 10px;
+    list-style-type: none;
+}
+
+#main #content ul li{
+    font-size: 0.8em;
+    margin-top: 25px;
+}
+
+#main #content ul li:hover{
+    text-decoration-line: underline;
+    cursor: pointer;
+}
