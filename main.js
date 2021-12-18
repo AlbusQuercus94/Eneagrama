@@ -44,10 +44,10 @@ for (let x in dados){
 function iniciar(){
     comecar.style.visibility = 'hidden'
     card.style.visibility = 'visible'
-    
+
     reset()
 
-    content.innerHTML = `<p>${dados[novetipo[tipo]].cartoes[carta].afirmacao}</p>`
+    content.innerHTML = ` <p class="afirmacao">${dados[novetipo[tipo]].cartoes[carta].afirmacao}</p>`
     content.style.color = `var(--${novetipo[tipo]}-txt-color)`
     document.querySelector('.card').style.backgroundColor = `var(--${novetipo[tipo]}-bg-color)`
 
@@ -138,7 +138,7 @@ function coringa(id){
 }
 
 function desempateDosGrupos(arr){
-    content.innerHTML = `<p>${desempate.coringa.pergunta}</p>`
+    content.innerHTML = ` <p class="afirmacao">${desempate.coringa.pergunta}</p>`
     content.innerHTML += `<ul></ul>`
     const ul = document.querySelector('ul')
     wrapper.style.visibility='hidden'
@@ -186,7 +186,7 @@ function escolha(eneaA, eneaB){//Nome provisório
             if(count==18){
                 console.log('só tem falso aqui')
                 
-                content.innerHTML = `<p>${desempate.coringa.pergunta}</p>`
+                content.innerHTML = ` <p class="afirmacao">${desempate.coringa.pergunta}</p>`
                 content.innerHTML += `<ul></ul>`
                 const ul = document.querySelector('ul')
                 for(let i=0; i<2; i++) {
@@ -231,7 +231,7 @@ btnAgree.addEventListener('click', () => {
     }
     else{
         eneatipo = dados[novetipo[tipo]]
-        content.innerHTML = `<p>${eneatipo.cartoes[carta].afirmacao}</p>`
+        content.innerHTML = ` <p class="afirmacao">${eneatipo.cartoes[carta].afirmacao}</p>`
         content.style.color = `var(--${novetipo[tipo]}-txt-color)`
         document.querySelector('.card').style.backgroundColor = `var(--${novetipo[tipo]}-bg-color)`
     }
@@ -248,7 +248,7 @@ btnDisagree.addEventListener('click', () => {
     }
     else{
         eneatipo = dados[novetipo[tipo]]
-        content.innerHTML = `<p>${eneatipo.cartoes[carta].afirmacao}</p>`
+        content.innerHTML = ` <p class="afirmacao">${eneatipo.cartoes[carta].afirmacao}</p>`
         content.style.color = `var(--${novetipo[tipo]}-txt-color)`
         document.querySelector('.card').style.backgroundColor = `var(--${novetipo[tipo]}-bg-color)`
     }
