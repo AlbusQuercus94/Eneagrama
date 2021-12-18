@@ -114,7 +114,7 @@ function reset(){
 function eneatipoMaisEscolhido(){
     for (let x in dados){
         if(x !=='desempate'){
-            agreeArray.push({enea:dados[x].tipo, confirm:dados[x].agree=Math.floor(Math.random()*10)});
+            agreeArray.push({enea:dados[x].tipo, confirm:dados[x].agree});
             disagreeArray.push(dados[x].eneatipo,dados[x].disagree);
         }
     }
@@ -289,9 +289,9 @@ btnDisagree.addEventListener('click', () => {
         document.querySelector('.card').style.backgroundColor = `var(--${novetipo[tipo]}-bg-color)`
     }
 })
-iniciar()
+// iniciar()
 
-eneatipoMaisEscolhido()
+// eneatipoMaisEscolhido()
 
 comecar.addEventListener('click', iniciar)
 
