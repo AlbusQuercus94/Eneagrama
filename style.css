@@ -57,7 +57,8 @@ header{
     /* background-color: #DBDBDB; */
     /* border-bottom: solid 1px rgba(255, 255, 255, 0.5); */
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     padding: 1%;
     /* box-shadow: 0px 10px 15px #706F6F; */
     font-size: 24px;
@@ -172,17 +173,6 @@ input[id='radio-4']:checked ~ .glider{
     transition: 1s all;
 }
 
-#main .btn{
-    position: absolute;
-    left: 40vw;
-    bottom: 45vh;
-    padding: 2%;
-    width: auto;
-}
-
-#main #iniciar{
-    visibility: visible;
-}
 
 #main .card:hover{
     transform: scale(1.05);
@@ -241,19 +231,32 @@ input[id='radio-4']:checked ~ .glider{
 }
 
 /*Botão de INICIO*/
+#main .btn{
+    position: absolute;
+}
+
+#main #iniciar{
+    visibility: visible;
+}
+
 #iniciar{
+    left: calc(50vw - 100px);
+    padding: 0;
+    bottom: 45vh;
     font-family: "Roboto Condensed",Arial, Helvetica, sans-serif;
     position: relative;
     display: inline-block;
     border: none;
     font-size: 1.5em;
     color: var(--bg-nav-text);
-    text-decoration: none;
     text-transform: uppercase;
     transition: 0.5s;
     letter-spacing: 4px;
     overflow: hidden;
-    margin-right: 50px;
+    text-align: center;
+    height: 50px;
+    min-width: 144px;
+    width: 200px;
 }
 #iniciar:hover{
     background: var(--bg-nav-text);
@@ -367,6 +370,7 @@ input[id='radio-4']:checked ~ .glider{
     background-color: white;
     border: solid 1px black;
     transition: 0.5s;
+    padding: 2%;
 }
 
 #main .card #disagree{
@@ -374,6 +378,7 @@ input[id='radio-4']:checked ~ .glider{
     background-color: black;
     border: solid 1px white;
     transition: 0.5s;
+    padding: 2%;
 }
 
 #main .card #agree:hover,
