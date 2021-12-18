@@ -289,9 +289,7 @@ btnDisagree.addEventListener('click', () => {
         document.querySelector('.card').style.backgroundColor = `var(--${novetipo[tipo]}-bg-color)`
     }
 })
-// iniciar()
 
-// eneatipoMaisEscolhido()
 
 comecar.addEventListener('click', iniciar)
 
