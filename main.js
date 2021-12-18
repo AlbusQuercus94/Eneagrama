@@ -12,11 +12,11 @@ const comecar = document.querySelector('#iniciar')
 const btnAgree = document.querySelector('#agree')
 const btnDisagree = document.querySelector('#disagree')
 const wrapper = document.querySelector('.wrapper')
+const home = document.querySelector('.home')
 
-/*
 const getInputs = document.querySelectorAll('.tabs input')
 const inputs = {...getInputs}
-
+/*
 console.log(getInputs.length)
 document.querySelector('.glider').style.width = `calc(((98%) - (0.75rem))/ ${getInputs.length})`
 
@@ -44,6 +44,27 @@ window.fimDeJogo = fimDeJogo
 
 //Agilizar o teste de eneatipoMaisEscolhido
 
+function navbar(id){
+    switch (id){
+    case 'radio-1':
+        console.log(home);
+        main.innerHTML="";
+        main.appendChild(home)
+        break
+    case 'radio-2':
+        console.log(id);
+        main.innerHTML = `Regras ainda a serem postas`
+        break
+    case 'radio-3':
+        console.log(id);
+        main.innerHTML = `Saiba mais ainda a serem postos.`
+        break
+    }
+}
+
+window.navbar = navbar
+
+console.log(inputs[0].id)
 
 for (let x in dados){
     if(x === 'desempate'){
@@ -93,7 +114,7 @@ function reset(){
 function eneatipoMaisEscolhido(){
     for (let x in dados){
         if(x !=='desempate'){
-            agreeArray.push({enea:dados[x].tipo, confirm:dados[x].agree});
+            agreeArray.push({enea:dados[x].tipo, confirm:dados[x].agree=Math.floor(Math.random()*10)});
             disagreeArray.push(dados[x].eneatipo,dados[x].disagree);
         }
     }
@@ -159,9 +180,9 @@ function desempateDosGrupos(arr){
 
     for(let i=0; i<arr.length; i++) {
         ul.innerHTML += `<li>
-                <button id = "${i}"class='liBTN' onclick='coringa(this.id)'>
+                <p id = "${i}"class='liBTN' onclick='coringa(this.id)'>
                     ${desempate.coringa[arr[i].enea]}
-                </button>
+                </ <p>
             </li>`
     }
     
@@ -183,15 +204,15 @@ function escolha(eneaA, eneaB){//Nome provisório
             const ul = document.querySelector('ul')
             ul.innerHTML += 
                 `<li>
-                    <button id="${eneaA}" class='liBTN' onclick='fimDeJogo(this.id)'>
+                    <p id="${eneaA}" class='liBTN' onclick='fimDeJogo(this.id)'>
                         ${x.opcao1}
-                    </button>
+                    </ <p>
                 </li>`
             ul.innerHTML += 
                 `<li>
-                    <button id="${eneaB}" class='liBTN' onclick='fimDeJogo(this.id)'>
+                    <p id="${eneaB}" class='liBTN' onclick='fimDeJogo(this.id)'>
                         ${x.opcao2}
-                    </button>
+                    </ <p>
                 </li>`
             content.style.color = `var(--desempate-txt-color)`
             document.querySelector('.card').style.backgroundColor = `var(--desempate-bg-color)`
@@ -206,9 +227,9 @@ function escolha(eneaA, eneaB){//Nome provisório
                 for(let i=0; i<2; i++) {
                     ul.innerHTML += 
                     `<li>
-                    <button id = "${maisEscolhidos[i].enea}" class='liBTN' onclick='fimDeJogo(this.id)'>
+                    <p id = "${maisEscolhidos[i].enea}" class='liBTN' onclick='fimDeJogo(this.id)'>
                         ${desempate.coringa[maisEscolhidos[i].enea]}
-                        </button>
+                        </p>
                     </li>`
                 }
                 content.style.color = `var(--desempate-txt-color)`
@@ -229,7 +250,8 @@ function escolhaFinal(){//Nome provisório
 
 function fimDeJogo(id){
     eneatipo = dados[novetipo[id-1]]
-    content.innerHTML = `<h1>${eneatipo.eneatipo}</h1>`
+    content.innerHTML = `<h1>${eneatipo.eneatipo}</h1>
+        <p>A ser posto</p>`
     
 }
 
@@ -267,11 +289,11 @@ btnDisagree.addEventListener('click', () => {
         document.querySelector('.card').style.backgroundColor = `var(--${novetipo[tipo]}-bg-color)`
     }
 })
+iniciar()
 
-
-// eneatipoMaisEscolhido()
+eneatipoMaisEscolhido()
 
 comecar.addEventListener('click', iniciar)
-// iniciar()
+
 
 

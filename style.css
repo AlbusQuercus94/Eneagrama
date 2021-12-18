@@ -226,6 +226,9 @@ input[id='radio-4']:checked ~ .glider{
 #main #content ul li{
     font-size: 0.8em;
     margin-top: 25px;
+    height: 200px;
+    /* display: none; */
+    color: white;
 }
 
 #main #content ul li:hover{
@@ -233,7 +236,11 @@ input[id='radio-4']:checked ~ .glider{
     cursor: pointer;
 }
 
+#main h1{
+    text-align: center;
+}
 
+/*Botão de INICIO*/
 #iniciar{
     font-family: "Roboto Condensed",Arial, Helvetica, sans-serif;
     position: relative;
@@ -341,7 +348,7 @@ input[id='radio-4']:checked ~ .glider{
     }
 }
 
-
+/*Cartões de Escolha*/
 #main .card .btn{
     font-family: "Roboto Condensed",Arial, Helvetica, sans-serif;
     border: none;

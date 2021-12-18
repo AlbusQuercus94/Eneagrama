@@ -13,17 +13,17 @@
     <header>
         <div class="container">
             <div class="tabs">
-                <input type="radio" name="tabs" id="radio-1" checked>
+                <input type="radio" name="tabs" id="radio-1" checked onclick="navbar(this.id)">
                 <label class="tab" for="radio-1">
-                    <a href="#">Home</a>
+                    Home
                 </label>
-                <input type="radio" name="tabs" id="radio-2">
+                <input type="radio" name="tabs" id="radio-2" onclick="navbar(this.id)">
                 <label class="tab" for="radio-2">
-                    <a href="#">Regras</a>
+                    Regras
                 </label>
-                <input type="radio" name="tabs" id="radio-3">
+                <input type="radio" name="tabs" id="radio-3" onclick="navbar(this.id)">
                 <label class="tab" for="radio-3">
-                    <a href="#">Saiba Mais</a>
+                    Saiba Mais
                 </label>
                 
                 <span class="glider"></span>
@@ -31,22 +31,25 @@
         </div>
     </header>
     <section id='main'>
-        <div class="inicio">
-            <button class="btn" id="iniciar" >
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Iniciar
-            </button>
-            
-        </div>
-        <div class="card" id="card">
-            <div id='content'></div>
-            <div class="wrapper">
-                <button class="btn" id="disagree">Discordo</button>
-                <button class="btn" id="agree">Concordo</button>
+        <div class="home">
+            <div class="inicio">
+                <button class="btn" id="iniciar" >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Iniciar
+                </button>
+                
             </div>
+            <div class="card" id="card">
+                <div id='content'></div>
+                <div class="wrapper">
+                    <button class="btn" id="disagree">Discordo</button>
+                    <button class="btn" id="agree">Concordo</button>
+                </div>
+            </div>
+
         </div>
     </section>
     <script type="module" src="main.js"></script>
