@@ -29,7 +29,7 @@ window.coringa = coringa
 window.fimDeJogo = fimDeJogo
 
 //Agilizar o teste de eneatipoMaisEscolhido
-// tipo=8;
+
 
 for (let x in dados){
     if(x === 'desempate'){
@@ -45,7 +45,9 @@ function iniciar(){
     comecar.style.visibility = 'hidden'
     card.style.visibility = 'visible'
     
-    content.innerHTML = `<p>${eneatipo.cartoes[carta].afirmacao}</p>`
+    reset()
+
+    content.innerHTML = `<p>${dados[novetipo[tipo]].cartoes[carta].afirmacao}</p>`
     content.style.color = `var(--${novetipo[tipo]}-txt-color)`
     document.querySelector('.card').style.backgroundColor = `var(--${novetipo[tipo]}-bg-color)`
 
@@ -53,11 +55,24 @@ function iniciar(){
 }
 
 function proximo(){
-    if(carta>7){
+    if(carta==8){
         carta = 0
         tipo++
     }else{
         carta++
+    }
+}
+
+function reset(){
+    carta = 0
+    tipo = 0
+    for (let x in dados){
+        if(x === 'desempate'){
+            continue
+        }else{
+            dados[x].agree = 0;
+            dados[x].disagree = 0;
+        }
     }
 }
 
@@ -189,7 +204,6 @@ function escolha(eneaA, eneaB){//Nome provisório
     }
 }
 
-
 function escolhaFinal(){//Nome provisório
     wrapper.style.visibility='hidden'
     
@@ -207,39 +221,37 @@ function fimDeJogo(id){
 
 
 btnAgree.addEventListener('click', () => {
-    
+
+    eneatipo.agree+=1;
+    proximo()
+
     if(tipo==9){
         console.log('Fim de Jogo')
         eneatipoMaisEscolhido()
     }
     else{
         eneatipo = dados[novetipo[tipo]]
-        eneatipo.agree+=1;
         content.innerHTML = `<p>${eneatipo.cartoes[carta].afirmacao}</p>`
         content.style.color = `var(--${novetipo[tipo]}-txt-color)`
         document.querySelector('.card').style.backgroundColor = `var(--${novetipo[tipo]}-bg-color)`
     }
-    console.log('FOI',eneatipo.agree)
-    console.log('carta', carta)
-    proximo()
 })
 
 btnDisagree.addEventListener('click', () => {
-    
+
+    eneatipo.disagree+=1;
+    proximo()
+
     if(tipo==9){
         console.log('Fim de Jogo')
         eneatipoMaisEscolhido()
     }
     else{
         eneatipo = dados[novetipo[tipo]]
-        eneatipo.disagree+=1;
         content.innerHTML = `<p>${eneatipo.cartoes[carta].afirmacao}</p>`
         content.style.color = `var(--${novetipo[tipo]}-txt-color)`
         document.querySelector('.card').style.backgroundColor = `var(--${novetipo[tipo]}-bg-color)`
     }
-    
-    console.log('FOI 22', eneatipo.disagree)
-    proximo()
 })
 
 
