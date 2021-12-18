@@ -13,6 +13,20 @@ const btnAgree = document.querySelector('#agree')
 const btnDisagree = document.querySelector('#disagree')
 const wrapper = document.querySelector('.wrapper')
 
+/*
+const getInputs = document.querySelectorAll('.tabs input')
+const inputs = {...getInputs}
+
+console.log(getInputs.length)
+document.querySelector('.glider').style.width = `calc(((98%) - (0.75rem))/ ${getInputs.length})`
+
+console.log(inputs[2].checked)
+
+for(let x in inputs){
+    inputs[x].checked=true
+    console.log(inputs[x])
+}
+*/
 let liBTN = document.querySelector('.liBTN')
 
 var eneatipo = dados[novetipo[0]]
@@ -258,4 +272,6 @@ btnDisagree.addEventListener('click', () => {
 // eneatipoMaisEscolhido()
 
 comecar.addEventListener('click', iniciar)
+// iniciar()
+
 

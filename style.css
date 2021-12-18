@@ -22,6 +22,10 @@
     --poder-txt-color: #fff;
     --paz-txt-color: #fff;
     --desempate-txt-color: #fff;
+
+    --bg-nav-color:#ffffff;
+    --bg-nav-text:#080808;
+
 }
 
 *{
@@ -43,22 +47,105 @@
 
 body{
     overflow: hidden;
+    background-color: rgb(202, 202, 202);
 }
 
+/*Header*/
+
 header{
-    background-color: aqua;
-    border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+    width: 100%;
+    /* background-color: #DBDBDB; */
+    /* border-bottom: solid 1px rgba(255, 255, 255, 0.5); */
     display: flex;
     justify-content: space-around;
     padding: 1%;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0px 10px 15px #706F6F; */
+    font-size: 24px;
+    font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.btn{
+header a{
+    text-decoration: none;
+}
+
+header a:visited{
+    color:inherit;
+}
+
+
+.tabs{
+    display: flex;
+    position: relative;
+    background-color: var(--bg-nav-text);
+    /* box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15),
+        0 6px 12px 0 rgba(24, 94, 224, 0.15); */
+    padding: 0.75rem;
+    border-radius: 99px;
+}
+
+.tabs *{
+    z-index: 2;
+}
+
+input[type='radio']{
+    display: none;
+}
+
+.tab{
+    color: var(--bg-nav-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 54px;
+    width: 200px;
+    font-weight: 500;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: color 0.15s ease-in;
+}
+
+input[type='radio']:checked + label{
+    color: var(--bg-nav-text);
+}
+
+input[id='radio-1']:checked ~ .glider{
+    transform: translateX(0);
+}
+
+input[id='radio-2']:checked ~ .glider{
+    transform: translateX(100%);
+}
+
+input[id='radio-3']:checked ~ .glider{
+    transform: translateX(200%);
+}
+
+input[id='radio-4']:checked ~ .glider{
+    transform: translateX(300%);
+}
+
+.glider{
+    position: absolute;
+    height: 54px;
+    width: calc(((98%) - (0.75rem))/3);
+    background: var(--bg-nav-color);
+    z-index: 1;
+    border-radius: 99px;
+    transition: 0.25s ease-out;
+}
+
+@media(max-width: 700px){
+    .tabs{
+        transform: scale(0.9);
+    }
+}
+
+
+.nav{
     font-size: 36px;
     font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
-    padding: 0.5%;
-    cursor: pointer;
 }
 
 #main{
@@ -67,6 +154,10 @@ header{
     align-content: center;
     font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
     margin: 100px;
+}
+
+#main #iniciar{
+    width: 20%;
 }
 
 #main .card{
@@ -86,9 +177,10 @@ header{
 
 #main .btn{
     position: absolute;
-    left: 45vw;
+    left: 40vw;
     bottom: 45vh;
     padding: 2%;
+    width: auto;
 }
 
 #main #iniciar{
@@ -96,7 +188,7 @@ header{
 }
 
 #main .card:hover{
-    transform: scale(1.15);
+    transform: scale(1.05);
 }
 
 #main .card #enea{
@@ -143,3 +235,4 @@ header{
     text-decoration-line: underline;
     cursor: pointer;
 }
+

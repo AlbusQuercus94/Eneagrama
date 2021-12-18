@@ -8,18 +8,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Eneagrama</title>
 </head>
-<body onload="">
-    <div class="background"></div>
+<body>
+    <!-- <div class="background"></div> -->
     <header>
-            <a class="btn">
-                Home
-            </a>
-            <a class="btn">
-                Regras
-            </a>
-            <a class="btn">
-                Saiba Mais
-            </a>
+        <div class="container">
+            <div class="tabs">
+                <input type="radio" name="tabs" id="radio-1" checked>
+                <label class="tab" for="radio-1">
+                    <a href="#">Home</a>
+                </label>
+                <input type="radio" name="tabs" id="radio-2">
+                <label class="tab" for="radio-2">
+                    <a href="#">Regras</a>
+                </label>
+                <input type="radio" name="tabs" id="radio-3">
+                <label class="tab" for="radio-3">
+                    <a href="#">Saiba Mais</a>
+                </label>
+                
+                <span class="glider"></span>
+            </div>
+        </div>
     </header>
     <section id='main'>
         <button class="btn" id="iniciar" >
