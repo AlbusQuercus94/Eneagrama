@@ -1,0 +1,56 @@
+
+@media(max-width: 700px){
+    
+    header{
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        left: 0;
+    }
+
+    header .container{
+        margin: 0;
+        position: relative;
+        left: 0;
+    }
+
+    header .container .tabs{
+        left: 0;
+        border-radius: 0;
+        width: 100vw;
+    }
+
+    #main{
+        margin: 0;
+        margin-top: 50px;
+        width: 100vw;
+    }
+
+    #main .card:hover{
+        transform: none;
+    }
+
+    .card #content{
+        font-size: 24px;
+    }
+
+    #main .card{
+        width: 100%;
+        box-shadow: none;
+        height: calc(100vh - 75px);
+        border-radius: 0;
+        padding: 0;
+    }
+
+    #main .card .afirmacao{
+        text-align: justify;
+        padding: 5%;
+        border-radius: 0;
+    }
+
+    #main .card .wrapper{
+        margin-bottom: 5%;
+    }
+
+}
