@@ -53,4 +53,33 @@
         margin-bottom: 5%;
     }
 
+    #main .regras,
+    #main .saibamais{
+        margin-top: -25px;
+        font-size: 25px;
+    }
+
+}
+
+
+@media (max-width: 400px){
+    header .container .tabs{
+        font-size: 20px;
+    }
+
+    
+    #main .saibamais{
+        margin-left: 25px;
+    }
+
+    #main .regras,
+    #main .saibamais{
+        margin-top: -25px;
+        font-size: 20px;
+    }
+
+    #main .saibamais{
+        padding: 10px;
+    }
+    
 }

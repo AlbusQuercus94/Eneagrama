@@ -52,7 +52,7 @@ body{
     width: 100vw;
 }
 
-/*Header*/
+/*---------------- Header --------------------*/
 
 header{
     width: 100%;
@@ -140,19 +140,19 @@ input[id='radio-4']:checked ~ .glider{
 }
 
 
-
-
 .nav{
     font-size: 36px;
     font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
 }
+
+/*------------------ SECTION MAIN------------------------*/
 
 #main{
     display: flex;
     justify-content: center;
     align-content: center;
     font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
-    margin: 100px;
+    margin: 50px;
 }
 
 
@@ -383,3 +383,49 @@ input[id='radio-4']:checked ~ .glider{
 #main .card #disagree:hover{
     transform: scale(1.05);
 }
+
+/*-------------- ESTILIZANDO REGRAS ---------------------*/
+
+#main .regras{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    font-size: 40px;
+}
+
+#main .regras h1{
+    margin-bottom: 10%;
+}
+
+#main .regras p{
+    text-align: justify;
+    line-height: 1.5;
+}
+
+
+#main .regras h1,
+#main .regras p{
+    flex-grow: 1;
+}
+
+/*-------------- ESTILIZANDO SAIBA MAIS ---------------------*/
+
+#main .saibamais{
+    font-size: 40px;
+    padding: 10px;
+}
+
+#main .saibamais a{
+    text-decoration: none;
+}
+
+#main .saibamais a:visited{
+    color: var(--bg-nav-text);
+}
+
+#main .saibamais a:hover,
+#main .saibamais a:focus{
+    color: cornsilk;
+}
+
