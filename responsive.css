@@ -72,6 +72,10 @@
         margin-left: 25px;
     }
 
+    #main #content{
+        font-size: 20px;
+    }
+
     #main .regras,
     #main .saibamais{
         margin-top: -25px;
