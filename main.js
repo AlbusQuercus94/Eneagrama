@@ -44,6 +44,8 @@ window.fimDeJogo = fimDeJogo
 
 //Agilizar o teste de eneatipoMaisEscolhido
 
+console.log(eneatipo.texto)
+
 function navbar(id){
     switch (id){
     case 'radio-1':
@@ -282,7 +284,7 @@ function escolhaFinal(){//Nome provisório
 function fimDeJogo(id){
     eneatipo = dados[novetipo[id-1]]
     content.innerHTML = `<h1>${eneatipo.eneatipo}</h1>
-        <p>A ser posto</p>`
+        <p>${eneatipo.texto}</p>`
     
 }
 

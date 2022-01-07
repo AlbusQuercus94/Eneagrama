@@ -3,6 +3,7 @@ export const dados =
     "perfeicao":{
         "eneatipo":"Perfeição",
         "tipo":1,
+        "texto":"Organizado, disciplinado e responsável, este indivíduo tende a focar sua atenção no erro nas coisas que precisam de correção. O perfeccionista reprime seus impulsos e desejos para manter uma postura correta na vida, está sempre monitorando o comportamento dos outros e suas próprias ações. Seu maior desafio é calar suas críticas internas e desenvolver a auto aceitação.",
         "cartoes":[
             {
                 "cartao":1,
@@ -45,6 +46,7 @@ export const dados =
     "prestatividade":{
         "eneatipo":"Prestatividade",
         "tipo":2,
+        "texto":"Generoso, colaborador e atencioso, o doador concentra sua atenção nas coisas que as outras pessoas desejam e precisam, negligenciando sua próprias necessidades. Este indivíduo faz de tudo para ser indispensável para quem é importante em sua vida, transformando-se naquilo que os outros esperam que ele seja. Seus principais desafios são receber e dar apoio apropriado, além de conseguir tomar decisões com liberdade.",
         "cartoes":[
             {
                 "cartao":1,
@@ -76,7 +78,7 @@ export const dados =
             },
             {
                 "cartao":8,
-                "afirmacao":"Descobri que as pessoas reagem com simpatia e afeto quando lhs dou atenção e incentivo. Sempre acho um jeito de elogiar as pessoas."
+                "afirmacao":"Descobri que as pessoas reagem com simpatia e afeto quando lhes dou atenção e incentivo. Sempre acho um jeito de elogiar as pessoas."
             },
             {
                 "cartao":9,
@@ -87,6 +89,7 @@ export const dados =
     "performance":{
         "eneatipo":"Performance",
         "tipo":3,
+        "texto":"Autoconfiante, eficiente e cheio de energia, essa pessoa tende a focar excessivamente nas trarefas e metas, deixando de lado seus sentimentos. Ao fugir do fracasso e buscar aprovação dos outros, o desempenhador acaba se tonrnando muito competitivo, ambicioso, impaciente e workaholic. O maior desafio enfrentado por este indivíduo é construir confiança.",
         "cartoes":[
             {
                 "cartao":1,
@@ -98,7 +101,7 @@ export const dados =
             },
             {
                 "cartao":3,
-                "afirmacao":"Algumas vezes tive dee simplificar as coisas e deixar outras de lado para atingirminhas metas e objetivos."
+                "afirmacao":"Algumas vezes tive de simplificar as coisas e deixar outras de lado para atingirminhas metas e objetivos."
             },
             {
                 "cartao":4,
@@ -106,7 +109,7 @@ export const dados =
             },
             {
                 "cartao":5,
-                "afirmacao":"Costumo impressionar as pessoas por minha capacidade de me superar e consquistar resultados de forma rápida. Costumo consquistar todos os objetivos para os quais decido meu foco e energia. Minas meetas costumam ser audaciosas."
+                "afirmacao":"Costumo impressionar as pessoas por minha capacidade de me superar e consquistar resultados de forma rápida. Costumo consquistar todos os objetivos para os quais decido meu foco e energia. Minhas metas costumam ser audaciosas."
             },
             {
                 "cartao":6,
@@ -114,7 +117,7 @@ export const dados =
             },
             {
                 "cartao":7,
-                "afirmacao":"Identifico-me tanto com o meu trablaho ou com o que faço que às vezes me esqueço até de quem eu sou."
+                "afirmacao":"Identifico-me tanto com o meu trabalho ou com o que faço que às vezes me esqueço até de quem eu sou."
             },
             {
                 "cartao":8,
@@ -122,13 +125,14 @@ export const dados =
             },
             {
                 "cartao":9,
-                "afirmacao":"Fico impaciente com pessoas que não usam bem o tempo. Algumas vezes preferiria simplesmente assumir um projeto a ver alguem consuzindo-o de forma lenta ou improdutiva."
+                "afirmacao":"Fico impaciente com pessoas que não usam bem o tempo. Algumas vezes preferiria simplesmente assumir um projeto a ver alguém consuzindo-o de forma lenta ou improdutiva."
             }
         ]
     },
     "profundidade":{
         "eneatipo":"Profundidade",
         "tipo":4,
+        "texto":"Calmo, paciente e altamente emotivo, este tipo sente que algo importante está faltando em sua vida. Este indivíduo está frequentemente se comparando às outas pessoas e, consequentemente, acaba desapontado consigo mesmo e com os outros. Seu desafio é apreciar o que está presente e manter uma liderança firme, apesar da alternância de sentimentos.",
         "cartoes":[
             {
                 "cartao":1,
@@ -156,7 +160,7 @@ export const dados =
             },
             {
                 "cartao":7,
-                "afirmacao":"Comparo-me às pessoas, às vezes, e penso por que alguns parecem termais do que eu, melhores relacionamentos e vidas mais felizes. Tenho um refinado senso estético e experimento um mundo rico em emoções e significado."
+                "afirmacao":"Comparo-me às pessoas, às vezes, e penso por que alguns parecem ter mais do que eu, melhores relacionamentos e vidas mais felizes. Tenho um refinado senso estético e experimento um mundo rico em emoções e significado."
             },
             {
                 "cartao":8,
@@ -171,6 +175,7 @@ export const dados =
     "privacidade":{
         "eneatipo":"Privacidade",
         "tipo":5,
+        "texto":"Intelignete, observador e cheio de boas ideias, este indivíduo tende a se isolar das pessoas para ter privacidade e ser autossuficiente, reduzindo seus desejos e adotando uma vida simples. Este tipo substitiu experiências reais por uma vida mental, armazenando conhecimento e observando o mundo à distância. Seu maior desafio é sustentar a conexão com as pessoas e manter-se envolvido com a vida.",
         "cartoes":[
             {
                 "cartao":1,
@@ -213,6 +218,7 @@ export const dados =
     "planejamento":{
         "eneatipo":"Planejamento",
         "tipo":6,
+        "texto":"Cauteloso, fiel e cooperativo, este tipo está sempre imaginando o pior e evitando tudo o que pode dar errado ou ser perigoso. Este indivíduo evita correr riscos e torna-se vigilante e ansioso, apresentando dificuldade em confiar nas pessoas e nas situações. Em geral, está é uma personalidade que tende a ser pessimista e não consegue reconhecer as coisas positivas que acontecem em sua vida. Seus desafios são construir a confiança e seguir adiante, apesar da dúvida e da incerteza.",
         "cartoes":[
             {
                 "cartao":1,
@@ -236,7 +242,7 @@ export const dados =
             },
             {
                 "cartao":6,
-                "afirmacao":"Sou uma pessoa muit ansiosa. Algumas pessoas me consideram inquieto e nervoso."
+                "afirmacao":"Sou uma pessoa muito ansiosa. Algumas pessoas me consideram inquieto e nervoso."
             },
             {
                 "cartao":7,
@@ -244,7 +250,7 @@ export const dados =
             },
             {
                 "cartao":8,
-                "afirmacao":"É curioso: sou muitas vezes cético, até cínico, em relação ainúmeras coisas e, de repente, mudo e começa a acreditar em tudo."
+                "afirmacao":"É curioso: sou muitas vezes cético, até cínico, em relação a inúmeras coisas e, de repente, mudo e começa a acreditar em tudo."
             },
             {
                 "cartao":9,
@@ -255,6 +261,7 @@ export const dados =
     "prazer":{
         "eneatipo":"Prazer",
         "tipo":7,
+        "texto":"Inovador, disposto e divertido, este tipo tende a se dispersar e buscar opções mais prazerosas em tudo o que faz, muitas vezes perdendo o foco e o compromentimento. Esta é uma pessoa que foge compulsivamente da dor e do desprazer, mantendo várias opções em aberto e levando a vida em ritmo de aventura. Seus maiores desafios são manter compromissos e vínculos e reconhecer a dor e as limitações.",
         "cartoes":[
             {
                 "cartao":1,
@@ -290,13 +297,14 @@ export const dados =
             },
             {
                 "cartao":9,
-                "afirmacao":"Não sou só uma pessoa divertida: tenho um lado sério, até sombrio, só qu não gosto de mexer muito com ele."
+                "afirmacao":"Não sou só uma pessoa divertida: tenho um lado sério, até sombrio, só que não gosto de mexer muito com ele."
             }
         ]
     },
     "poder":{
         "eneatipo":"Poder",
         "tipo":8,
+        "texto":"Resoluto, determinado e autêntico, este indivíduo comete excessos e exagera no exercício do poder e da dominação. Está é uma personalidade que foge da vulnerabilidade, tende a negar suas fraquezas e costuma defender aqueles que são mais fracos. Além disso, essa pessoa expressa sua raiva de maneira direta e confrontadora, podendo tornar-se intimidadivo. Seus desafios são aplicar poder e controle de maneira proporcional às situações.",
         "cartoes":[
             {
                 "cartao":1,
@@ -339,6 +347,7 @@ export const dados =
     "paz":{
         "eneatipo":"Paz",
         "tipo":9,
+        "texto":"Calmo e paciente, essa personalidade costuma perder nos pedidos e demandas das outras pessoas, esquecendo-se do que é fundamental para si mesmo. Este indivíduo foge de conflitos e tem imensa dificuldade para falar não. Em geral, ele prefere situações familiares e que tragram conforto, contendo sua energia e sua raiva. Seus desafios são traçãr prioridades e limites além de expressar suas próprias visões.",
         "cartoes":[
             {
                 "cartao":1,
@@ -354,7 +363,7 @@ export const dados =
             },
             {
                 "cartao":4,
-                "afirmacao":"Prefiro tomar decisões na base do consenso. Coloco-me como mediador, considero importante ouvir a opinião de todos os envolvidos e sou capaz de entender diferentes pontos de vista. Não gosto de decis~eos autoritárias, e esse também não é o meu estilo."
+                "afirmacao":"Prefiro tomar decisões na base do consenso. Coloco-me como mediador, considero importante ouvir a opinião de todos os envolvidos e sou capaz de entender diferentes pontos de vista. Não gosto de decisões autoritárias, e esse também não é o meu estilo."
             },
             {
                 "cartao":5,
@@ -362,7 +371,7 @@ export const dados =
             },
             {
                 "cartao":6,
-                "afirmacao":"Acredito que, para ser valorizado e me relacionar bem, preciso concordar com as pessoas. Muitas vezes me esqueço ddas minahs necessidades para atender as pessoas, evitando conflitos e desgaste. Pode ser que alguma vontade minha seja deixada para trás, mas isso não é uma coisa tão importante assim."
+                "afirmacao":"Acredito que, para ser valorizado e me relacionar bem, preciso concordar com as pessoas. Muitas vezes me esqueço das minhas necessidades para atender as pessoas, evitando conflitos e desgaste. Pode ser que alguma vontade minha seja deixada para trás, mas isso não é uma coisa tão importante assim."
             },
             {
                 "cartao":7,
@@ -370,7 +379,7 @@ export const dados =
             },
             {
                 "cartao":8,
-                "afirmacao":"Eu me distraio facilmente, mesmo que esteja fazendo uma ocisa importante. Às vezes me atrapalho com as prioridades. Quando as pessoas me interropem e pedem alguma coisa, é difícil dizer não a elas e acabo deixando minhas coisas em segundo plano."
+                "afirmacao":"Eu me distraio facilmente, mesmo que esteja fazendo uma coisa importante. Às vezes me atrapalho com as prioridades. Quando as pessoas me interropem e pedem alguma coisa, é difícil dizer não a elas e acabo deixando minhas coisas em segundo plano."
             },
             {
                 "cartao":9,
