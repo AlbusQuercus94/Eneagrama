@@ -175,7 +175,7 @@ export const dados =
     "privacidade":{
         "eneatipo":"Privacidade",
         "tipo":5,
-        "texto":"Intelignete, observador e cheio de boas ideias, este indivíduo tende a se isolar das pessoas para ter privacidade e ser autossuficiente, reduzindo seus desejos e adotando uma vida simples. Este tipo substitiu experiências reais por uma vida mental, armazenando conhecimento e observando o mundo à distância. Seu maior desafio é sustentar a conexão com as pessoas e manter-se envolvido com a vida.",
+        "texto":"Inteligente, observador e cheio de boas ideias, este indivíduo tende a se isolar das pessoas para ter privacidade e ser autossuficiente, reduzindo seus desejos e adotando uma vida simples. Este tipo substitiu experiências reais por uma vida mental, armazenando conhecimento e observando o mundo à distância. Seu maior desafio é sustentar a conexão com as pessoas e manter-se envolvido com a vida.",
         "cartoes":[
             {
                 "cartao":1,

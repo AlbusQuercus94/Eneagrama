@@ -285,7 +285,8 @@ function fimDeJogo(id){
     eneatipo = dados[novetipo[id-1]]
     content.innerHTML = `<h1>${eneatipo.eneatipo}</h1>
         <p>${eneatipo.texto}</p>`
-    
+    content.style.color = `var(--${novetipo[id-1]}-txt-color)`
+    document.querySelector('.card').style.backgroundColor = `var(--${novetipo[id-1]}-bg-color)`  
 }
 
 
