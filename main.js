@@ -53,11 +53,42 @@ function navbar(id){
         break
     case 'radio-2':
         console.log(id);
-        main.innerHTML = `Regras ainda a serem postas`
+        main.innerHTML = `
+            <div class='regras'>
+                <h1>Regras</h1>
+                <p>O eneagrama é um teste de personalidade, portanto leve o tempo que precisar para fazê-lo.</p>
+                <p>O teste é simples, aparecerá uma carta com uma frase e você deverá escolher se concorda ou discorda.</p>
+                <p>São 9 cores de cartas e ao fim será contado quantas você concordou de cada tipo e selecionaremos as duas mais escolhidas para fazer um teste final.</p>
+                <p>Se o teste recomeçar, significa que você teve 3 ou mais tipos de cores com o maior número de confirmações (exemplo: 6 confirmações cor 1, 6 confirmações cor 2, 6 confirmações cor 3).</p>
+                <p>Ao fim você saberá seu eneagrama.</p>
+                <p>Este teste é apenas um treinamento de programação. Se você quer saber mais ou ter algo fidegno, vá no saiba mais e veja os links sobre o Eneagrama</p>
+            </div>
+            `
         break
     case 'radio-3':
         console.log(id);
-        main.innerHTML = `Saiba mais ainda a serem postos.`
+        main.innerHTML = `
+            <div class='saibamais'>
+                <ul>
+                    <li>
+                        <a href='https://br.arica.org/the-enneagram' target="_blank">
+                            The eneagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href='https://www.vittude.com/blog/eneagrama/' target="_blank">
+                            Eneagrama: conheça os 9 tipos de personalidade
+                        </a>
+                    </li>
+                    <li>
+                        <a href='https://www.sbie.com.br/blog/os-9-tipos-de-personalidade-do-eneagrama-e-como-psicologia-explica-o-teste/' target="_blank">
+                        Os 9 tipos de personalidade do Eneagrama e como a psicologia explica o teste
+
+                        </a>
+                    </li>
+                </ul>
+                </div>
+            `
         break
     }
 }
