@@ -81,7 +81,7 @@ function iniciar(){
     card.style.visibility = 'visible'
 
     reset()
-
+    console.log(carta, tipo)
     content.innerHTML = ` <p class="afirmacao">${dados[novetipo[tipo]].cartoes[carta].afirmacao}</p>`
     content.style.color = `var(--${novetipo[tipo]}-txt-color)`
     document.querySelector('.card').style.backgroundColor = `var(--${novetipo[tipo]}-bg-color)`

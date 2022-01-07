@@ -31,6 +31,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .background{
@@ -46,8 +47,9 @@
 }
 
 body{
-    overflow: hidden;
+    /* overflow: hidden; */
     background-color: rgb(202, 202, 202);
+    width: 100vw;
 }
 
 /*Header*/
@@ -380,61 +382,4 @@ input[id='radio-4']:checked ~ .glider{
 #main .card #agree:hover,
 #main .card #disagree:hover{
     transform: scale(1.05);
-}
-
-@media(max-width: 700px){
-    .tabs{
-        left: 0;
-        border-radius: 0;
-        width: 100vw;
-    }
-
-    header{
-        /* display: inline; */
-        /* width: 80%; */
-        margin: 0;
-        padding: 0;
-        position: relative;
-        left: 0;
-    }
-
-    header .container{
-        margin: 0;
-        position: relative;
-        left: 0;
-    }
-
-    #main{
-        margin: 0;
-        margin-top: 50px;
-        width: 100vw;
-    }
-
-    #main .card:hover{
-        transform: none;
-    }
-
-    .card #content{
-        font-size: 24px;
-    }
-
-    #main .card{
-        width: 100vw;
-        box-shadow: none;
-        height: calc(100vh - 75px);
-        border-radius: 0;
-        padding: 0;
-    }
-
-    #main .card .afirmacao{
-        text-align: justify;
-        padding: 5%;
-        border-radius: 0;
-    }
-
-    #main .card .wrapper{
-        margin-bottom: 5%;
-    }
-
-
 }
