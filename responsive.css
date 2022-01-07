@@ -21,6 +21,10 @@
         width: 100vw;
     }
 
+    .home{
+        width: 100%;
+    }
+
     #main{
         margin: 0;
         margin-top: 50px;
