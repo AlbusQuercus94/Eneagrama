@@ -233,9 +233,9 @@ input[id='radio-4']:checked ~ .glider{
     position: absolute;
 }
 
-#main #iniciar{
+/* #main #iniciar{
     visibility: visible;
-}
+} */
 
 #iniciar{
     left: calc(50vw - 100px);
@@ -256,6 +256,7 @@ input[id='radio-4']:checked ~ .glider{
     min-width: 144px;
     width: 200px;
 }
+
 #iniciar:hover{
     background: var(--bg-nav-text);
     color: var(--bg-nav-color);

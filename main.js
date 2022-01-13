@@ -9,6 +9,8 @@ const content = document.querySelector('#content')
 const main = document.querySelector('#main')
 const card = document.querySelector('#card')
 const comecar = document.querySelector('#iniciar')
+const comeco = document.querySelector('.inicio')
+const titulo = document.querySelector('.title')
 const btnAgree = document.querySelector('#agree')
 const btnDisagree = document.querySelector('#disagree')
 const wrapper = document.querySelector('.wrapper')
@@ -110,7 +112,7 @@ for (let x in dados){
 
 
 function iniciar(){
-    comecar.style.visibility = 'hidden'
+    comeco.style.visibility = 'hidden'
     card.style.visibility = 'visible'
 
     reset()
@@ -119,7 +121,6 @@ function iniciar(){
     content.style.color = `var(--${novetipo[tipo]}-txt-color)`
     document.querySelector('.card').style.backgroundColor = `var(--${novetipo[tipo]}-bg-color)`
 
-    
 }
 
 function proximo(){
@@ -185,7 +186,12 @@ function eneatipoMaisEscolhido(){
     }
 
     else if(maisEscolhidos.length>2){//Se tiver 3 eneatipos com o mesmo maior valor de confirmações, dever-se-á repetir o teste
-        iniciar()
+        comeco.style.visibility = 'visible'
+        card.style.visibility = 'hidden'
+        titulo.innerHTML=`
+            <p>Refazer o teste</p>
+            <p>Três ou mais tipos ficaram com a mesma quantidade de concordos</p>
+        `
         console.log('Refazer o teste')
     }
 
