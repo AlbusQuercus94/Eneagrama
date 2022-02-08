@@ -5,15 +5,12 @@ const novetipo = Object.keys(dados) //Para poder alterar as cores do css.
 const {perfeicao, prestatividade, performance, profundidade, privacidade, planejamento, prazer, poder, paz, desempate} = dados // Criando constantes com cada tipo de carta eneatipo e desempate.
 
 //DOM
-const content = document.querySelector('#content')
 const main = document.querySelector('#main')
-const card = document.querySelector('#card')
+
 const comecar = document.querySelector('#iniciar')
 const comeco = document.querySelector('.inicio')
 const titulo = document.querySelector('.title')
-const btnAgree = document.querySelector('#agree')
-const btnDisagree = document.querySelector('#disagree')
-const wrapper = document.querySelector('.wrapper')
+
 const home = document.querySelector('.home')
 
 const getInputs = document.querySelectorAll('.tabs input')
@@ -45,6 +42,54 @@ window.coringa = coringa
 window.fimDeJogo = fimDeJogo
 
 //Agilizar o teste de eneatipoMaisEscolhido
+
+function criarCartão (tipo) {
+    eneatipo = dados[novetipo[tipo]]
+
+    /*Container Principal */
+    let card = document.createElement('div') 
+    card.classList.add('card')
+    card.id = 'card'
+
+    /*Afirmação do Cartão */
+    let node = document.createElement('p')
+    node.id = 'content'
+    let textnode = document.createTextNode(eneatipo.cartoes[carta].afirmacao)
+
+    /*Envelope dos botões */
+    let wrapper = document.createElement('div')
+    wrapper.classList.add('wrapper')
+
+    /*Botões */
+    let btnAgree = document.createElement('button')
+    btnAgree.classList.add('btn')
+    btnAgree.id = 'agree'
+    btnAgree.appendChild(document.createTextNode('Concordo'))
+
+    let btnDisagree = document.createElement('button')
+    btnDisagree.classList.add('btn')
+    btnDisagree.id = 'disagree'
+    btnDisagree.appendChild(document.createTextNode('Discordo'))
+
+    /* Hierarquia dos elementos */
+    node.appendChild(textnode)
+    card.appendChild(node)
+    wrapper.appendChild(btnAgree)
+    wrapper.appendChild(btnDisagree)
+    card.appendChild(wrapper)
+    home.appendChild(card)
+
+}
+
+criarCartão(tipo)
+
+const card = document.querySelector('#card')
+const content = document.querySelector('#content')
+const btnAgree = document.querySelector('#agree')
+const btnDisagree = document.querySelector('#disagree')
+
+const wrapper = document.querySelector('.wrapper')
+
 
 console.log(eneatipo.texto)
 
@@ -300,7 +345,7 @@ btnAgree.addEventListener('click', () => {
 
     eneatipo.agree+=1;
     proximo()
-
+    console.log(eneatipo.agree,agreeArray)
     if(tipo==9){
         console.log('Fim de Jogo')
         eneatipoMaisEscolhido()
@@ -317,7 +362,7 @@ btnDisagree.addEventListener('click', () => {
 
     eneatipo.disagree+=1;
     proximo()
-
+    console.log(eneatipo.disagree,disagreeArray)
     if(tipo==9){
         console.log('Fim de Jogo')
         eneatipoMaisEscolhido()
@@ -332,6 +377,5 @@ btnDisagree.addEventListener('click', () => {
 
 
 comecar.addEventListener('click', iniciar)
-
 
 
